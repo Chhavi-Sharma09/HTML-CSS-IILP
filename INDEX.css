@@ -1,0 +1,72 @@
+/*selector{
+        property:value}*/
+/*UNIVERSAL SELECTOR (*) 1️⃣*/
+*{
+        border : 2px dotted aqua;   
+}
+/*TAG SELECTOR 2️⃣*/
+/* TO APPLY SOME CSS ON MULTIPLE SAME TAGS */
+h1 {
+        color : red;
+}
+/* class selector .anyclassname 3️⃣ */
+/* to apply css on different multiple tags and we have to use atrribute
+class and assign same name to them and can wrute multiple classes by adding space in ebtween while writing class*/
+.abcd{
+        color : yellowgreen;
+        font-size: 55px;
+}
+.efgh{
+        background-color: blueviolet;
+}
+/*ID selector (#anyidname)4️⃣*/
+/*for uniqueness and should applu on a single element without using
+inline css*/
+#unique {
+        font-weight: 700;
+        color: palevioletred;
+}
+/*group selector , 5️⃣*/
+/* jsut to give some css to multiple different tags in this we can use  id
+, tag, class selector */
+h1,
+h3,
+.nano,
+#unique{
+        color : orange;
+}
+/*Descendant selector: - id can be used, tag can be used and classes too 6️⃣*/
+#multipleoptions section p {
+        color:yellow;
+        background-color: yellow;
+}
+/*CHILD SELECTOR > , direct child pr apply krne ke liye 7️⃣*/
+#multipleoptions > p {
+        font-weight: bolder;
+        font-size: xx-large;
+}
+/* pseudo Elements 8️⃣: , can use values like odd, even or spewcific no , will work even if u modify item list, will apply to new elements*/
+li:nth-child(even){
+       text-decoration: underline;
+}
+/*Pseudo class :: 9️⃣,, after or before can be used */
+#pseudo::before{
+      content:"THIS IS WRITTEN USING CSS. ";  
+}
+
+#pseudo::first-line{
+        background-color: red;
+}
+#pseudo::first-letter{
+        font-style: italic;
+}
+/*PADDING ND BORDER 🔟*/
+/*padding workds clockwise , top se chalu*/
+/*padding is used for giving space between text/content nd border*/
+/* single value of padding- applies in all direction, */
+#pseudo{
+        border : 2px solid black;
+        padding : 20px 50px; /* first value is for top nd bottom, second is for left nd right*/
+        /* padding : 40px 50px 60px 70px; this will be for top right bottom left*/
+        /*margin:- bahar border ke spacing*/
+}

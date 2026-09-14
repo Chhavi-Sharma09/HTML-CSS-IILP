@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--INTERNAL CSS-->
+    <style>
+        /*selector
+        property:value*/
+        h1 {
+            color : red;
+            background-color: yellow;
+        }
+    </style>
+    <!--EXTERNAL CSS-->
+    <!--priority depends upon the order for external and internal css-->
+    <link rel="stylesheet" href="./INDEX.css"/>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+        <img 
+        src="https://codehubnexus.com/assets/logov2-BR5dDC9U.png"
+         alt="URL IS NOT CORRECT"
+         height="100px"
+         width="100px"
+         />
+        </a>
+        <a href="./index.html" target="_blank">Home</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>  <!--ANCHOR TYPE-->
+        <a href = "https://codehubnexus.com/">Code</a>
+    </header>
+    <!--FORM-->
+    <form>
+        <label>ENTER YR NAME</label>
+        <input type="text" placeholder="WRITE UR NAME"
+         required 
+         minlength="2"
+         maxlength="7"/>
+        <br />
+        <label>ENTER YR EMAIL</label>
+        <input type="email" placeholder="WRITE UR EMAILE" required />
+        <br />
+        <label>ENTER YR PASSWORD</label>
+        <input type="password" placeholder="WRITE UR PASSWORD" required />
+        <br />
+        <label>ENTER YR MOBILE NO</label>
+        <input type="number" placeholder="WRITE UR MOBILE NO" 
+        required
+        min ="1000000"
+        max="1000000000000000"/>
+        <label>Choose your course</label>
+        <select>
+            <option value="">Select your Course </option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="Js">Javascript</option>
+        </select>
+        <br/>
+        <label>Upload your CV</label>
+        <input type="file" accept=".pdf" required/>
+        <br/>
+        <label>Upload your Qualification details</label>
+        <input type="file" multiple required/>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+
+
+    </form>
+    <!--HEADINGS-->
+    <h1 style="color: blue">HELLO</h1> <!--INLINE CSS (LEAST PREFERABLE, most priority , cant overwrite)-->
+    <h1>HEADING 2</h1>
+    <h2>TABLE</h2>
+    <table border="20">
+        <thead>
+            <tr>
+                <th>S1 NO</th>
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ellie</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>elisa</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>elsa</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+    </table>
+    
+</body>
+</html>

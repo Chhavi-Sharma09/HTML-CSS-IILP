@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.container{
+  border:2px solid red;
+  height: 90vh; /*viewport height------Matlab:
+
+Browser ki visible height ka 40%
+
+Agar browser ki height 800px hai:
+
+40vh = 40% of 800 = 320px*/
+  width: 40%; /*40 percent of the original width of the parent---So % mostly parent ko reference leta hai.*/
+}
+
+p{
+  color:red;
+  background-color: yellow;
+  font-weight: 700; /* by default position is static */
+}
+
+.sticky{
+  position:sticky; /* works relative/ acc to parent*/
+  top:0px; /* sim we have bottom, left right */
+}
+
+.relative{ /* rleative nd absolute always work toghether ,, relative for parent and absolute for child*/
+  position: relative;/*block type se inline me , plus  position of child*/
+}
+.absolute{
+  position:absolute;
+  right: 50px;
+  bottom: 50px; /*but if u remove relative class from div tag then it takes it's paretn element as body , nearest parent element */
+}
+.fixed{ /*works acc to window , screen , fix hi rhega vhi website */
+  position:fixed;
+  bottom: 200px;
+  right: 60px;
+}
