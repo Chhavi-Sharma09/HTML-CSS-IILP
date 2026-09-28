@@ -158,3 +158,88 @@ const attendancePercentage = students.map((currentValue) => {
     return attendance;
 });
 console.log(attendancePercentage);
+// - Students who have React skill.
+const React = students.filter((currentValue) => {
+  let name;
+    for (let i = 0; i < currentValue.skills.length; i++) {
+        if (currentValue.skills[i] == "React") {
+           name = currentValue.name;
+        }
+    }
+    return name;
+})
+.map((currentValue) => currentValue.name);
+console.log(React);
+// - Students with no projects.
+const NoProj = students.filter((currentValue) => {
+  let name;
+        if (currentValue.projects.length == 0 ) {
+           name = currentValue.name;
+        }
+    return name;
+})
+.map((currentValue) => currentValue.name);
+console.log(NoProj);
+// Students whose backend marks < 60.
+const backendmarkslow = students.filter((currentValue) => {
+  let name;
+        if (currentValue.marks.backend < 60 ) {
+           name = currentValue.name;
+        }
+    return name;
+})
+.map((currentValue) => currentValue.name);
+console.log(backendmarkslow);
+// - Students from Delhi or Mumbai AND placed.
+const DorMANDP = students.filter((currentValue) => {
+  let name;
+        if ((currentValue.address.city == "Delhi" ||currentValue.address.city == "Mumbai") && currentValue.isPlaced == true ) {
+           name = currentValue.name;
+        }
+    return name;
+})
+.map((currentValue) => currentValue.name);
+console.log(DorMANDP);
+// - Students with attendance < 75%.
+const attendancePercentagelow = students.filter((currentValue) => {
+    let present = 0;
+    for (let i = 0; i < currentValue.attendance.length; i++) {
+        if (currentValue.attendance[i] === true) {
+            present++;
+        }
+    }
+    const attendance =(present/currentValue.attendance.length) * 100;
+      if(attendance < 75){
+        return currentValue.name;
+      }
+})
+.map((currentValue)=> currentValue.name);
+console.log(attendancePercentagelow);
+// - Total number of projects across all students.
+  let count =0 ;
+  for (let i = 0 ; i < students.length ; i++){
+    count+= students[i].projects.length;
+  }
+console.log(count);
+// - Average frontend marks of all students.
+  let avg = 0;
+    for (let i = 0 ; i < students.length ; i++){
+    avg+= students[i].marks.frontend;
+  }
+  avg /= students.length;
+console.log(avg);
+
+// - Find student with highest project rating overall.
+// - Count students per course.
+// - Total number of skills across all students.
+// - Get all unique skills.
+// - Find top-rated project among all students.
+// - Group students by city.
+// - Get students sorted by average marks (descending).
+// - Check if every student has at least one skill.
+// - Check if any student has rating > 4.7.
+// - Find student with best attendance.
+// - Get list of students who worked on MongoDB.
+// - Flatten all project titles into one array.
+// - Find most common skill among students.
+
